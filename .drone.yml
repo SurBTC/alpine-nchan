@@ -7,9 +7,8 @@ pipeline:
     tags:
       - ${CI_TAG=${CI_COMMIT_SHA}}
     when:
-      event: [ tag, push ]
-      branch: [ master ]
-      ref: [ 'refs/tags/v*.*', 'refs/heads/master' ]
+      event: [ tag ]
+      ref: [ 'refs/tags/v*.*' ]
 
   # deploy:
   #   when:
